@@ -37,23 +37,20 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 3 PRO React layouts
 import Analytics from "layouts/dashboards/analytics";
-import Sales from "layouts/dashboards/sales";
-import ProfileOverview from "layouts/pages/profile/profile-overview";
-import AllProjects from "layouts/pages/profile/all-projects";
-import NewUser from "layouts/pages/users/new-user";
-import Settings from "layouts/pages/account/settings";
-import Billing from "layouts/pages/account/billing";
-import Invoice from "layouts/pages/account/invoice";
-import Timeline from "layouts/pages/projects/timeline";
-import PricingPage from "layouts/pages/pricing-page";
-import Widgets from "layouts/pages/widgets";
-import RTL from "layouts/pages/rtl";
-import Charts from "layouts/pages/charts";
-import Notifications from "layouts/pages/notifications";
-import Kanban from "layouts/applications/kanban";
-import Wizard from "layouts/applications/wizard";
-import DataTables from "layouts/applications/data-tables";
-import Calendar from "layouts/applications/calendar";
+import ProfileOverview from "layouts/images/profile/profile-overview";
+import AllProjects from "layouts/images/profile/all-projects";
+import NewUser from "layouts/images/users/new-user";
+import Settings from "layouts/images/account/settings";
+import Billing from "layouts/images/account/billing";
+import Invoice from "layouts/images/account/invoice";
+import Timeline from "layouts/dashboards/projects/timeline";
+import Widgets from "layouts/dashboards/widgets";
+import Charts from "layouts/dashboards/charts";
+import Notifications from "layouts/dashboards/notifications";
+import Kanban from "layouts/transmissions/kanban";
+import Wizard from "layouts/transmissions/wizard";
+import DataTables from "layouts/transmissions/data-tables";
+import Calendar from "layouts/transmissions/calendar";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
 import SignInIllustration from "layouts/authentication/sign-in/illustration";
@@ -72,7 +69,7 @@ import profilePicture from "assets/images/team-3.jpg";
 const routes = [
   {
     type: "collapse",
-    name: "Brooklyn Alice",
+    name: "David Broda",
     key: "brooklyn-alice",
     icon: <MDAvatar src={profilePicture} alt="Brooklyn Alice" size="sm" />,
     collapse: [
@@ -110,59 +107,33 @@ const routes = [
         component: <Analytics />,
       },
       {
-        name: "Sales",
-        key: "sales",
-        route: "/dashboards/sales",
-        component: <Sales />,
+        name: "Timeline",
+        key: "timeline",
+        route: "/dashboards/projects/timeline",
+        component: <Timeline />,
       },
-    ],
-  },
-  { type: "title", title: "Pages", key: "title-pages" },
-  {
-    type: "collapse",
-    name: "Pages",
-    key: "pages",
-    icon: <Icon fontSize="small">image</Icon>,
-    collapse: [
-      {
-        name: "Projects",
-        key: "projects",
-        collapse: [
-          {
-            name: "Timeline",
-            key: "timeline",
-            route: "/pages/projects/timeline",
-            component: <Timeline />,
-          },
-        ],
-      },
-      {
-        name: "Pricing Page",
-        key: "pricing-page",
-        route: "/pages/pricing-page",
-        component: <PricingPage />,
-      },
-      { name: "RTL", key: "rtl", route: "/pages/rtl", component: <RTL /> },
-      {
+           {
         name: "Widgets",
         key: "widgets",
-        route: "/pages/widgets",
+        route: "/dashboards/widgets",
         component: <Widgets />,
       },
-      {
+            {
         name: "Charts",
         key: "charts",
-        route: "/pages/charts",
+        route: "/dashboards/charts",
         component: <Charts />,
       },
-      {
+            {
         name: "Notfications",
         key: "notifications",
-        route: "/pages/notifications",
+        route: "/dashboards/notifications",
         component: <Notifications />,
       },
     ],
   },
+  { type: "title", title: "Apps", key: "title-Apps" },
+ 
   {
     type: "collapse",
     name: "Account",
@@ -217,37 +188,38 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Applications",
-    key: "applications",
+    name: "Transmissions",
+    key: "transmissions",
     icon: <Icon fontSize="small">apps</Icon>,
     collapse: [
       {
-        name: "Kanban",
-        key: "kanban",
-        route: "/applications/kanban",
-        component: <Kanban />,
-      },
-      {
         name: "Wizard",
         key: "wizard",
-        route: "/applications/wizard",
+        route: "/transmissions/wizard",
         component: <Wizard />,
       },
       {
         name: "Data Tables",
         key: "data-tables",
-        route: "/applications/data-tables",
+        route: "/transmissions/data-tables",
         component: <DataTables />,
       },
       {
         name: "Calendar",
         key: "calendar",
-        route: "/applications/calendar",
+        route: "/transmissions/calendar",
         component: <Calendar />,
       },
     ],
   },
-
+ {
+    type: "collapse",
+    name: "Images",
+    key: "images",
+    icon: <Icon fontSize="small">image</Icon>,
+    collapse: [
+    ],
+  },
   {
     type: "collapse",
     name: "Authentication",
