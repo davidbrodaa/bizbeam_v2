@@ -1,56 +1,16 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-/** 
-  All of the routes for the Material Dashboard 3 PRO React are added here,
-  You can add a new route, customize the routes and delete the routes here.
-
-  Once you add a new route on this file it will be visible automatically on
-  the Sidenav.
-
-  For adding a new route you can follow the existing routes in the routes array.
-  1. The `type` key with the `collapse` value is used for a route.
-  2. The `type` key with the `title` value is used for a title inside the Sidenav. 
-  3. The `type` key with the `divider` value is used for a divider between Sidenav items.
-  4. The `name` key is used for the name of the route on the Sidenav.
-  5. The `key` key is used for the key of the route (It will help you with the key prop inside a loop).
-  6. The `icon` key is used for the icon of the route on the Sidenav, you have to add a node.
-  7. The `collapse` key is used for making a collapsible item on the Sidenav that contains other routes
-  inside (nested routes), you need to pass the nested routes inside an array as a value for the `collapse` key.
-  8. The `route` key is used to store the route location which is used for the react router.
-  9. The `href` key is used to store the external links location.
-  10. The `title` key is only for the item with the type of `title` and its used for the title text on the Sidenav.
-  10. The `component` key is used to store the component of its route.
-*/
-
 // Material Dashboard 3 PRO React layouts
 import Analytics from "layouts/dashboards/analytics";
 import ProfileOverview from "layouts/images/profile/profile-overview";
-import AllProjects from "layouts/images/profile/all-projects";
+import AllProjects from "layouts/transmissions/all-projects";
 import NewUser from "layouts/images/users/new-user";
-import Settings from "layouts/images/account/settings";
-import Billing from "layouts/images/account/billing";
-import Invoice from "layouts/images/account/invoice";
+import Settings from "layouts/account/settings";
+import Billing from "layouts/account/billing";
+import Invoice from "layouts/account/invoice";
 import Timeline from "layouts/dashboards/projects/timeline";
 import Widgets from "layouts/dashboards/widgets";
 import Charts from "layouts/dashboards/charts";
 import Notifications from "layouts/dashboards/notifications";
-import Kanban from "layouts/transmissions/kanban";
-import Wizard from "layouts/transmissions/wizard";
-import DataTables from "layouts/transmissions/data-tables";
-import Calendar from "layouts/transmissions/calendar";
+import Calendar from "layouts/dashboards/calendar";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
 import SignInIllustration from "layouts/authentication/sign-in/illustration";
@@ -130,6 +90,12 @@ const routes = [
         route: "/dashboards/notifications",
         component: <Notifications />,
       },
+            {
+        name: "Calendar",
+        key: "calendar",
+        route: "/dashboards/calendar",
+        component: <Calendar />,
+      },
     ],
   },
   { type: "title", title: "Apps", key: "title-Apps" },
@@ -167,12 +133,6 @@ const routes = [
     icon: <Icon fontSize="small">people</Icon>,
     collapse: [
       {
-        name: "All Projects",
-        key: "all-projects",
-        route: "/pages/profile/all-projects",
-        component: <AllProjects />,
-      },
-      {
         name: "New User",
         key: "new-user",
         route: "/pages/users/new-user",
@@ -193,29 +153,25 @@ const routes = [
     icon: <Icon fontSize="small">apps</Icon>,
     collapse: [
       {
-        name: "Wizard",
-        key: "wizard",
-        route: "/transmissions/wizard",
-        component: <Wizard />,
+        name: "All Projects",
+        key: "all-projects",
+        route: "layouts/transmissions/all-projects",
+        component: <AllProjects />,
       },
-      {
-        name: "Data Tables",
-        key: "data-tables",
-        route: "/transmissions/data-tables",
-        component: <DataTables />,
-      },
-      {
-        name: "Calendar",
-        key: "calendar",
-        route: "/transmissions/calendar",
-        component: <Calendar />,
-      },
-    ],
+    ],    
   },
  {
     type: "collapse",
     name: "Images",
     key: "images",
+    icon: <Icon fontSize="small">image</Icon>,
+    collapse: [
+    ],
+  },
+  {
+    type: "collapse",
+    name: "Reports",
+    key: "reports",
     icon: <Icon fontSize="small">image</Icon>,
     collapse: [
     ],
