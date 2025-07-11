@@ -184,7 +184,7 @@ export default function App() {
                 ? brandDark
                 : brandWhite
             }
-            brandName="Creative Tim"
+            brandName=""
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
