@@ -1,110 +1,60 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 
 // Material Dashboard 3 PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 import MDBadge from "components/MDBadge";
 
 function Authentication() {
   return (
-    <Card id="2fa" sx={{ overflow: "visible" }}>
-      <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-        <MDTypography variant="h5">Two-factor authentication</MDTypography>
-        <MDBadge variant="contained" color="success" badgeContent="enabled" container />
+    <Card id="2fa">
+      <MDBox p={3} lineHeight={1} display="flex" justifyContent="space-between" alignItems="center">
+        <MDTypography variant="h6" fontWeight="medium">
+          Two-factor authentication
+        </MDTypography>
+        <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
       </MDBox>
       <MDBox p={3}>
-        <MDBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
-        >
-          <MDTypography variant="body2" color="text">
-            Security keys
-          </MDTypography>
-          <MDBox
-            display="flex"
-            alignItems={{ xs: "flex-start", sm: "center" }}
-            flexDirection={{ xs: "column", sm: "row" }}
-          >
-            <MDBox mx={{ xs: 0, sm: 2 }} mb={{ xs: 1, sm: 0 }}>
-              <MDTypography variant="button" color="text" fontWeight="regular">
-                No Security keys
-              </MDTypography>
-            </MDBox>
-            <MDButton variant="outlined" color="dark" size="small">
-              add
-            </MDButton>
-          </MDBox>
-        </MDBox>
-        <Divider />
-        <MDBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
-        >
-          <MDTypography variant="body2" color="text">
-            SMS number
-          </MDTypography>
-          <MDBox
-            display="flex"
-            alignItems={{ xs: "flex-start", sm: "center" }}
-            flexDirection={{ xs: "column", sm: "row" }}
-          >
-            <MDBox mx={{ xs: 0, sm: 2 }} mb={{ xs: 1, sm: 0 }}>
-              <MDTypography variant="button" color="text" fontWeight="regular">
-                +3012374423
-              </MDTypography>
-            </MDBox>
-            <MDButton variant="outlined" color="dark" size="small">
-              edit
-            </MDButton>
-          </MDBox>
-        </MDBox>
-        <Divider />
-        <MDBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
-        >
-          <MDTypography variant="body2" color="text">
-            Authenticator app
-          </MDTypography>
-          <MDBox
-            display="flex"
-            alignItems={{ xs: "flex-start", sm: "center" }}
-            flexDirection={{ xs: "column", sm: "row" }}
-          >
-            <MDBox mx={{ xs: 0, sm: 2 }} mb={{ xs: 1, sm: 0 }}>
-              <MDTypography variant="button" color="text" fontWeight="regular">
-                Not Configured
-              </MDTypography>
-            </MDBox>
-            <MDButton variant="outlined" color="dark" size="small">
-              set up
-            </MDButton>
-          </MDBox>
-        </MDBox>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
+            <MDTypography variant="body2" color="text">
+              Security keys
+            </MDTypography>
+            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+          </Grid>
+          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
+            <Button variant="outlined" size="small">
+              Disable
+            </Button>
+          </Grid>
+          
+          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
+            <MDTypography variant="body2" color="text">
+              SMS number
+            </MDTypography>
+            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+          </Grid>
+          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
+            <Button variant="outlined" size="small">
+              Disable
+            </Button>
+          </Grid>
+          
+          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
+            <MDTypography variant="body2" color="text">
+              Authenticator app
+            </MDTypography>
+            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+          </Grid>
+          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
+            <Button variant="outlined" size="small">
+              Disable
+            </Button>
+          </Grid>
+        </Grid>
       </MDBox>
     </Card>
   );

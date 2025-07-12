@@ -10,38 +10,32 @@ import MDInput from "components/MDInput";
 // Settings page components
 import FormField from "layouts/account/components/FormField";
 
-function BasicInfo() {
+function PrimaryContactInfo() {
   return (
-    <Card id="basic-info" sx={{ overflow: "visible" }}>
+    <Card id="primary-contact-info" sx={{ overflow: "visible" }}>
       <MDBox p={3} lineHeight={1}>
         <MDTypography variant="h6" fontWeight="medium">
-          Basic Info
+          Primary Contact Basic Info
         </MDTypography>
       </MDBox>
       <MDBox component="form" pb={3} px={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <FormField label="Company Legal Name" placeholder="Legal" />
+          <Grid item xs={12} md={6}>
+            <FormField label="Primary Contact First Name (admin)" placeholder="John" />
           </Grid>
           <Grid item xs={12} md={6}>
-            <FormField label="Address 1" placeholder="123 Example Ave" />
+            <FormField label="Primary Contact Last Name (admin)" placeholder="Doe" />
           </Grid>
           <Grid item xs={12} md={6}>
-            <FormField label="Address 2" placeholder="Suite 100" />
+            <FormField label="Email" placeholder="example@email.com" inputProps={{ type: "email" }} />
           </Grid>
-          <Grid item xs={12} md={4}>
-            <FormField label="City" placeholder="Chicago" />
+          <Grid item xs={12} md={6}>
+            <FormField label="Custom Email" placeholder="custom@email.com" inputProps={{ type: "email" }} />
           </Grid>
-          <Grid item xs={12} md={4}>
-            <FormField label="ZIP" placeholder="60606" />
+          <Grid item xs={12} md={6}>
+            <FormField label="Your location" placeholder="Sydney, Australia" />
           </Grid>
-          <Grid item xs={12} md={4}>
-            <FormField label="Country" placeholder="United States of America" />
-          </Grid>
-          <Grid item xs={12}>
-            <FormField label="Notification Email" placeholder="notifications@example.com" inputProps={{ type: "email" }} />
-          </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} md={6}>
             <FormField label="Phone Number" placeholder="+1 (312) 555-1212" />
           </Grid>
           <Grid item xs={12}>
@@ -68,4 +62,4 @@ function BasicInfo() {
   );
 }
 
-export default BasicInfo;
+export default PrimaryContactInfo;

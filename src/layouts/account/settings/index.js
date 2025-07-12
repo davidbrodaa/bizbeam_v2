@@ -5,58 +5,48 @@ import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 
 // Settings page components
-import BaseLayout from "layouts/account/components/BaseLayout";
 import Sidenav from "layouts/account/settings/components/Sidenav";
-import Header from "layouts/account/settings/components/Header";
 import BasicInfo from "layouts/account/settings/components/BasicInfo";
-import ChangePassword from "layouts/account/settings/components/ChangePassword";
 import Authentication from "layouts/account/settings/components/Authentication";
-import Accounts from "layouts/account/settings/components/Accounts";
 import Notifications from "layouts/account/settings/components/Notifications";
-import Sessions from "layouts/account/settings/components/Sessions";
 import DeleteAccount from "layouts/account/settings/components/DeleteAccount";
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import PrimaryContactInfo from "layouts/account/settings/components/PrimaryContactInfo";
 
 function Settings() {
   return (
-    <BaseLayout>
+    <DashboardLayout>
+      <DashboardNavbar />
       <MDBox mt={4}>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={3}>
             <Sidenav />
           </Grid>
           <Grid item xs={12} lg={9}>
-            <MDBox mb={3}>
-              <Grid container spacing={3}>
-                <Grid item xs={12}>
-                  <Header />
-                </Grid>
-                <Grid item xs={12}>
-                  <BasicInfo />
-                </Grid>
-                <Grid item xs={12}>
-                  <ChangePassword />
-                </Grid>
-                <Grid item xs={12}>
-                  <Authentication />
-                </Grid>
-                <Grid item xs={12}>
-                  <Accounts />
-                </Grid>
-                <Grid item xs={12}>
-                  <Notifications />
-                </Grid>
-                <Grid item xs={12}>
-                  <Sessions />
-                </Grid>
-                <Grid item xs={12}>
-                  <DeleteAccount />
-                </Grid>
-              </Grid>
+            <MDBox>
+              <MDBox mb={3}>
+                <BasicInfo />
+              </MDBox>
+              <MDBox mb={3}>
+                <PrimaryContactInfo />
+              </MDBox>
+              <MDBox mb={3}>
+                <Authentication />
+              </MDBox>
+              <MDBox mb={3}>
+                <Notifications />
+              </MDBox>
+              <MDBox mb={3}>
+                <DeleteAccount />
+              </MDBox>
             </MDBox>
           </Grid>
         </Grid>
       </MDBox>
-    </BaseLayout>
+      <Footer />
+    </DashboardLayout>
   );
 }
 

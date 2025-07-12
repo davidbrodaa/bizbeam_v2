@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Table from "@mui/material/Table";
@@ -30,13 +15,12 @@ import TableCell from "layouts/account/settings/components/TableCell";
 function Notifications() {
   return (
     <Card id="notifications">
-      <MDBox p={3} lineHeight={1}>
-        <MDBox mb={1}>
-          <MDTypography variant="h5">Notifications</MDTypography>
-        </MDBox>
+      <MDBox p={3} lineHeight={1} display="flex" flexDirection="column">
+        <MDTypography variant="h6" fontWeight="medium">
+          Notifications
+        </MDTypography>
         <MDTypography variant="button" color="text">
-          Choose how you receive notifications. These notification settings
-          apply to the things you’re watching.
+          Choose how you receive notifications. These notification settings apply to the things you're watching.
         </MDTypography>
       </MDBox>
       <MDBox pb={3} px={3}>
@@ -63,11 +47,10 @@ function Notifications() {
                 <TableCell padding={[1, 1, 1, 0.5]} noBorder>
                   <MDBox lineHeight={1.4}>
                     <MDTypography
-                      display="block"
                       variant="button"
                       fontWeight="regular"
                     >
-                      Mentions
+                      New User Creation
                     </MDTypography>
                     <MDTypography
                       variant="caption"
@@ -92,11 +75,10 @@ function Notifications() {
                 <TableCell padding={[1, 1, 1, 0.5]} noBorder>
                   <MDBox lineHeight={1.4}>
                     <MDTypography
-                      display="block"
                       variant="button"
                       fontWeight="regular"
                     >
-                      Comments
+                      Login Activity
                     </MDTypography>
                     <MDTypography
                       variant="caption"
@@ -121,11 +103,10 @@ function Notifications() {
                 <TableCell padding={[1, 1, 1, 0.5]} noBorder>
                   <MDBox lineHeight={1.4}>
                     <MDTypography
-                      display="block"
                       variant="button"
                       fontWeight="regular"
                     >
-                      Follows
+                      New Projects
                     </MDTypography>
                     <MDTypography
                       variant="caption"
@@ -148,7 +129,7 @@ function Notifications() {
               </TableRow>
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]} noBorder>
-                  <MDTypography display="block" variant="button" color="text">
+                  <MDTypography variant="button" color="text">
                     Log in from a new device
                   </MDTypography>
                 </TableCell>
