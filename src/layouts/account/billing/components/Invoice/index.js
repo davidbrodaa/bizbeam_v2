@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -23,7 +8,7 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-function Invoice({ date, id, price, noGutter = false }) {
+function Invoice({ date, id, price, noGutter, pdfIcon }) {
   return (
     <MDBox
       component="li"
@@ -46,12 +31,14 @@ function Invoice({ date, id, price, noGutter = false }) {
         <MDTypography variant="button" fontWeight="regular" color="text">
           {price}
         </MDTypography>
-        <MDBox display="flex" alignItems="center" lineHeight={1} ml={3} sx={{ cursor: "pointer" }}>
-          <Icon fontSize="small">picture_as_pdf</Icon>
-          <MDTypography variant="button" fontWeight="bold">
-            &nbsp;PDF
-          </MDTypography>
-        </MDBox>
+        {pdfIcon && (
+          <MDBox display="flex" alignItems="center" lineHeight={1} ml={3} sx={{ cursor: "pointer" }}>
+            <Icon color="info" fontSize="small">picture_as_pdf</Icon>
+            <MDTypography variant="button" fontWeight="bold" color="info">
+              &nbsp;PDF
+            </MDTypography>
+          </MDBox>
+        )}
       </MDBox>
     </MDBox>
   );
@@ -63,6 +50,7 @@ Invoice.propTypes = {
   id: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   noGutter: PropTypes.bool,
+  pdfIcon: PropTypes.bool
 };
 
 export default Invoice;

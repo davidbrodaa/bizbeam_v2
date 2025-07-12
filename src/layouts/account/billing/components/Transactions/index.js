@@ -1,37 +1,18 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Card from "@mui/material/Card";
-// import Divider from "@mui/material/Divider";
 import Icon from "@mui/material/Icon";
 
 // Material Dashboard 3 PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-// import MDButton from "components/MDButton";
-
-// Billing page components
-import Transaction from "layouts/account/billing/components/Transaction";
+import MDButton from "components/MDButton";
 
 function Transactions() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-          Your Transaction&apos;s
+        <MDTypography variant="h6" fontWeight="medium">
+          Your Transactions
         </MDTypography>
         <MDBox display="flex" alignItems="flex-start">
           <MDBox color="text" mr={0.5} lineHeight={0}>
@@ -46,77 +27,78 @@ function Transactions() {
       </MDBox>
       <MDBox pt={3} pb={2} px={2}>
         <MDBox mb={2}>
-          <MDTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
-            newest
-          </MDTypography>
-        </MDBox>
-        <MDBox
-          component="ul"
-          display="flex"
-          flexDirection="column"
-          p={0}
-          m={0}
-          sx={{ listStyle: "none" }}
-        >
-          <Transaction
-            color="error"
-            icon="expand_more"
-            name="Netflix"
-            description="27 March 2020, at 12:30 PM"
-            value="- $ 2,500"
-          />
-          <Transaction
-            color="success"
-            icon="expand_less"
-            name="Apple"
-            description="27 March 2020, at 04:30 AM"
-            value="+ $ 2,000"
-          />
-        </MDBox>
-        <MDBox mt={1} mb={2}>
-          <MDTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
-            yesterday
-          </MDTypography>
-        </MDBox>
-        <MDBox
-          component="ul"
-          display="flex"
-          flexDirection="column"
-          p={0}
-          m={0}
-          sx={{ listStyle: "none" }}
-        >
-          <Transaction
-            color="success"
-            icon="expand_less"
-            name="Stripe"
-            description="26 March 2020, at 13:45 PM"
-            value="+ $ 750"
-          />
-          <Transaction
-            color="success"
-            icon="expand_less"
-            name="HubSpot"
-            description="26 March 2020, at 12:30 PM"
-            value="+ $ 1,000"
-          />
-          <Transaction
-            color="success"
-            icon="expand_less"
-            name="Creative Tim"
-            description="26 March 2020, at 08:30 AM"
-            value="+ $ 2,500"
-          />
-          <Transaction
-            color="dark"
-            icon="priority_high"
-            name="Webflow"
-            description="26 March 2020, at 05:00 AM"
-            value="Pending"
-          />
+          <MDBox
+            component="ul"
+            display="flex"
+            flexDirection="column"
+            p={0}
+            m={0}
+            sx={{ listStyle: "none" }}
+          >
+            <Transaction
+              color="success"
+              icon="arrow_upward"
+              name="Data"
+              description="2 TB ($250 per TB)"
+              value="+$300"
+            />
+            <Transaction
+              color="success"
+              icon="arrow_upward"
+              name="Transfers"
+              description="1k"
+              value="0"
+            />
+            <Transaction
+              color="success"
+              icon="arrow_upward"
+              name="Connections"
+              description="85 (+100 included)"
+              value="0"
+            />
+          </MDBox>
         </MDBox>
       </MDBox>
     </Card>
+  );
+}
+
+// Transaction component
+function Transaction({ color, icon, name, description, value }) {
+  return (
+    <MDBox key={name} component="li" py={1} pr={2} mb={1}>
+      <MDBox display="flex" justifyContent="space-between" alignItems="center">
+        <MDBox display="flex" alignItems="center">
+          <MDBox mr={2}>
+            <MDBox
+              display="grid"
+              justifyContent="center"
+              alignItems="center"
+              bgColor={color}
+              color="white"
+              width="2rem"
+              height="2rem"
+              shadow="md"
+              borderRadius="lg"
+              variant="gradient"
+            >
+              <Icon fontSize="small">{icon}</Icon>
+            </MDBox>
+          </MDBox>
+          <MDBox display="flex" flexDirection="column">
+            <MDTypography variant="button" fontWeight="medium" gutterBottom>
+              {name}
+            </MDTypography>
+            <MDTypography variant="caption" color="text" fontWeight="regular">
+              {description}
+            </MDTypography>
+          </MDBox>
+        </MDBox>
+        <MDTypography variant="button" color={color} fontWeight="medium">
+          {value}
+        </MDTypography>
+      </MDBox>
+    </MDBox>
   );
 }
 
