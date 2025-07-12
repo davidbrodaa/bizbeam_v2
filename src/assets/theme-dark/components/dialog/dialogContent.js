@@ -35,8 +35,8 @@ const dialogContent = {
     },
 
     dividers: {
-      borderTop: `${borderWidth[1]} solid ${rgba(borderColor, 0.6)}`,
-      borderBottom: `${borderWidth[1]} solid ${rgba(borderColor, 0.6)}`,
+      borderTop: `${borderWidth[1]} solid ${borderColor}`,
+      borderBottom: `${borderWidth[1]} solid ${borderColor}`,
     },
   },
 };
