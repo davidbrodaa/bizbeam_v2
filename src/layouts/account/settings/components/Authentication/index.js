@@ -10,49 +10,52 @@ import MDBadge from "components/MDBadge";
 
 function Authentication() {
   return (
-    <Card id="2fa">
-      <MDBox p={3} lineHeight={1} display="flex" justifyContent="space-between" alignItems="center">
-        <MDTypography variant="h6" fontWeight="medium">
+    <Card id="2fa" sx={{ mb: 3 }}>
+      <MDBox p={3} lineHeight={1}>
+        <MDTypography variant="h6" fontWeight="medium" mb={2}>
           Two-factor authentication
         </MDTypography>
-        <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
-      </MDBox>
-      <MDBox p={3}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
-            <MDTypography variant="body2" color="text">
-              Security keys
-            </MDTypography>
-            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
-          </Grid>
-          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
-            <Button variant="outlined" size="small">
-              Disable
-            </Button>
-          </Grid>
-          
-          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
-            <MDTypography variant="body2" color="text">
-              SMS number
-            </MDTypography>
-            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
-          </Grid>
-          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
-            <Button variant="outlined" size="small">
-              Disable
-            </Button>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <MDBox display="flex" justifyContent="space-between" alignItems="center" py={1}>
+              <MDTypography variant="body2" color="text">
+                Security keys
+              </MDTypography>
+              <MDBox display="flex" alignItems="center" gap={2}>
+                <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+                <Button variant="outlined" size="small" color="error">
+                  Disable
+                </Button>
+              </MDBox>
+            </MDBox>
           </Grid>
           
-          <Grid item xs={12} md={6} display="flex" justifyContent="space-between" alignItems="center">
-            <MDTypography variant="body2" color="text">
-              Authenticator app
-            </MDTypography>
-            <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+          <Grid item xs={12}>
+            <MDBox display="flex" justifyContent="space-between" alignItems="center" py={1}>
+              <MDTypography variant="body2" color="text">
+                SMS number
+              </MDTypography>
+              <MDBox display="flex" alignItems="center" gap={2}>
+                <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+                <Button variant="outlined" size="small" color="error">
+                  Disable
+                </Button>
+              </MDBox>
+            </MDBox>
           </Grid>
-          <Grid item xs={12} md={6} display="flex" justifyContent="flex-end">
-            <Button variant="outlined" size="small">
-              Disable
-            </Button>
+          
+          <Grid item xs={12}>
+            <MDBox display="flex" justifyContent="space-between" alignItems="center" py={1}>
+              <MDTypography variant="body2" color="text">
+                Authenticator app
+              </MDTypography>
+              <MDBox display="flex" alignItems="center" gap={2}>
+                <MDBadge variant="contained" color="success" badgeContent="ENABLED" container />
+                <Button variant="outlined" size="small" color="error">
+                  Disable
+                </Button>
+              </MDBox>
+            </MDBox>
           </Grid>
         </Grid>
       </MDBox>

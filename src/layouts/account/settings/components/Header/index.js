@@ -1,58 +1,42 @@
-import { useState } from "react";
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-import Switch from "@mui/material/Switch";
+import Icon from "@mui/material/Icon";
 
 // Material Dashboard 3 PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDAvatar from "components/MDAvatar";
-
-// Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import MDButton from "components/MDButton";
 
 function Header() {
-  const [visible, setVisible] = useState(true);
-
-  const handleSetVisible = () => setVisible(!visible);
-
   return (
-    <Card id="profile">
-      <MDBox p={2}>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item>
-            <MDAvatar src={burceMars} alt="profile-image" size="xl" shadow="sm" />
-          </Grid>
-          <Grid item>
-            <MDBox height="100%" mt={0.5} lineHeight={1}>
-              <MDTypography variant="h5" fontWeight="medium">
-                Alex Thompson
-              </MDTypography>
-              <MDTypography variant="button" color="text" fontWeight="medium">
-                CEO / Co-Founder
-              </MDTypography>
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={3} sx={{ ml: "auto" }}>
-            <MDBox
-              display="flex"
-              justifyContent={{ md: "flex-end" }}
-              alignItems="center"
-              lineHeight={1}
-            >
-              <MDTypography variant="caption" fontWeight="regular">
-                Switch to {visible ? "invisible" : "visible"}
-              </MDTypography>
-              <MDBox ml={1}>
-                <Switch checked={visible} onChange={handleSetVisible} />
-              </MDBox>
-            </MDBox>
-          </Grid>
-        </Grid>
+    <MDBox mb={3}>
+      <MDBox display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+        <MDBox>
+          <MDTypography variant="h4" fontWeight="medium">
+            Profile Overview
+          </MDTypography>
+          <MDBox display="flex" alignItems="center" mt={0.5}>
+            <MDTypography variant="button" color="text" mr={1}>
+              Account Status:
+            </MDTypography>
+            <MDTypography variant="button" color="text" mr={2}>
+              01/04/2025
+            </MDTypography>
+            <MDTypography variant="button" color="text" mr={1}>
+              Last Modified:
+            </MDTypography>
+            <MDTypography variant="button" color="text">
+              04/23/2025
+            </MDTypography>
+          </MDBox>
+        </MDBox>
+        <MDButton variant="text" color="info" size="small">
+          <Icon fontSize="small">file_upload</Icon>
+          &nbsp;Upload Logo
+        </MDButton>
       </MDBox>
-    </Card>
+    </MDBox>
   );
 }
 

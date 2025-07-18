@@ -5,43 +5,37 @@ import Grid from "@mui/material/Grid";
 import MDBox from "components/MDBox";
 
 // Settings page components
-import Sidenav from "layouts/account/settings/components/Sidenav";
+import Header from "layouts/account/settings/components/Header";
+import CompanyLogo from "layouts/account/settings/components/CompanyLogo";
 import BasicInfo from "layouts/account/settings/components/BasicInfo";
 import Authentication from "layouts/account/settings/components/Authentication";
 import Notifications from "layouts/account/settings/components/Notifications";
-import DeleteAccount from "layouts/account/settings/components/DeleteAccount";
+import DescriptionInfo from "layouts/account/settings/components/DescriptionInfo";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
-import PrimaryContactInfo from "layouts/account/settings/components/PrimaryContactInfo";
 
 function Settings() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox mt={4}>
+        <Header />
         <Grid container spacing={3}>
-          <Grid item xs={12} lg={3}>
-            <Sidenav />
+          <Grid item xs={12}>
+            <CompanyLogo />
           </Grid>
-          <Grid item xs={12} lg={9}>
-            <MDBox>
-              <MDBox mb={3}>
-                <BasicInfo />
-              </MDBox>
-              <MDBox mb={3}>
-                <PrimaryContactInfo />
-              </MDBox>
-              <MDBox mb={3}>
-                <Authentication />
-              </MDBox>
-              <MDBox mb={3}>
-                <Notifications />
-              </MDBox>
-              <MDBox mb={3}>
-                <DeleteAccount />
-              </MDBox>
-            </MDBox>
+          <Grid item xs={12}>
+            <BasicInfo />
+          </Grid>
+          <Grid item xs={12}>
+            <Authentication />
+          </Grid>
+          <Grid item xs={12}>
+            <Notifications />
+          </Grid>
+          <Grid item xs={12}>
+            <DescriptionInfo />
           </Grid>
         </Grid>
       </MDBox>
