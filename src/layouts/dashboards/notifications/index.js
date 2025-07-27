@@ -29,7 +29,7 @@ import MDSnackbar from "components/MDSnackbar";
 // Material Dashboard 3 PRO React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import Footer from "components/Footer";
 
 function Notifications() {
   const [successSB, setSuccessSB] = useState(false);

@@ -33,7 +33,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Material Dashboard 3 PRO React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import Footer from "components/Footer";
 
 function BaseLayout({ stickyNavbar = false, children }) {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");

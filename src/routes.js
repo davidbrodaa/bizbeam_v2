@@ -1,11 +1,9 @@
 // Material Dashboard 3 PRO React layouts
 import Analytics from "layouts/dashboards/analytics";
-import ProfileOverview from "layouts/images/profile/profile-overview";
 import AllProjects from "layouts/transmissions/all-projects";
-import NewUser from "layouts/images/users/new-user";
 import Settings from "layouts/account/settings";
 import Billing from "layouts/account/billing";
-import Invoice from "layouts/account/invoice";
+import Users from "layouts/account/users";
 import Timeline from "layouts/dashboards/projects/timeline";
 import Widgets from "layouts/dashboards/widgets";
 import Charts from "layouts/dashboards/charts";
@@ -33,12 +31,6 @@ const routes = [
     key: "brooklyn-alice",
     icon: <MDAvatar src={profilePicture} alt="Brooklyn Alice" size="sm" />,
     collapse: [
-      {
-        name: "My Profile",
-        key: "my-profile",
-        route: "/pages/profile/profile-overview",
-        component: <ProfileOverview />,
-      },
       {
         name: "Settings",
         key: "profile-settings",
@@ -85,7 +77,7 @@ const routes = [
         component: <Charts />,
       },
             {
-        name: "Notfications",
+        name: "Notifications",
         key: "notifications",
         route: "/dashboards/notifications",
         component: <Notifications />,
@@ -113,37 +105,25 @@ const routes = [
         component: <Settings />,
       },
       {
+        name: "Users",
+        key: "users",
+        route: "/pages/account/users",
+        component: <Users />,
+      },
+           {
         name: "Billing",
         key: "billing",
         route: "/pages/account/billing",
         component: <Billing />,
       },
-      {
-        name: "Invoice",
-        key: "invoice",
-        route: "/pages/account/invoice",
-        component: <Invoice />,
-      },
     ],
   },
   {
     type: "collapse",
-    name: "Team",
-    key: "team",
+    name: "Vendors",
+    key: "vendors",
     icon: <Icon fontSize="small">people</Icon>,
     collapse: [
-      {
-        name: "New User",
-        key: "new-user",
-        route: "/pages/users/new-user",
-        component: <NewUser />,
-      },
-      {
-        name: "Profile Overview",
-        key: "profile-overview",
-        route: "/pages/profile/profile-overview",
-        component: <ProfileOverview />,
-      },
     ],
   },
   {
@@ -155,7 +135,7 @@ const routes = [
       {
         name: "All Projects",
         key: "all-projects",
-        route: "layouts/transmissions/all-projects",
+        route: "/transmissions/all-projects",
         component: <AllProjects />,
       },
     ],    

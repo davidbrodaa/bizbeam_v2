@@ -13,7 +13,7 @@ import Notifications from "layouts/account/settings/components/Notifications";
 import DescriptionInfo from "layouts/account/settings/components/DescriptionInfo";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import Footer from "components/Footer";
 
 function Settings() {
   return (

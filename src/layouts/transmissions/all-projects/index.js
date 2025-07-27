@@ -14,7 +14,7 @@ import MDButton from "components/MDButton";
 // Material Dashboard 3 PRO React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import Footer from "components/Footer";
 import ComplexProjectCard from "examples/Cards/ProjectCards/ComplexProjectCard";
 
 // Project page components

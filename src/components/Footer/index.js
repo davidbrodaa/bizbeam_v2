@@ -1,17 +1,3 @@
-/**
-=========================================================
-* Material Dashboard 3 PRO React - v2.4.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -28,12 +14,13 @@ import MDTypography from "components/MDTypography";
 import typography from "assets/theme/base/typography";
 
 function Footer({ 
-  company = { href: "https://www.creative-tim.com/", name: "Creative Tim" }, 
+  company = { href: "https://bizbeam.com", name: "Bizbeam LLC." }, 
   links = [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "https://www.bizbeam.com", name: "Bizbeam" },
+    { href: "https://www.bizbeam.com/about-us", name: "About Us" },
+    { href: "https://www.bizbeam.com/contact-us", name: "Contact Us" },
+    { href: "https://www.bizbeam.com/privacy-policy", name: "Privacy Policy" },
+    { href: "https://www.bizbeam.com/terms-of-service", name: "Terms of Service" }
   ] 
 }) {
   const { href, name } = company;
@@ -68,19 +55,13 @@ function Footer({
         fontSize={size.sm}
         px={1.5}
       >
-        &copy; {new Date().getFullYear()}, made with
-        <MDBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
-          <Icon color="inherit" fontSize="inherit">
-            favorite
-          </Icon>
-        </MDBox>
-        by
+        &copy; {new Date().getFullYear()}, made by 
         <Link href={href} target="_blank">
           <MDTypography variant="button" fontWeight="medium">
             &nbsp;{name}&nbsp;
           </MDTypography>
         </Link>
-        for a better web.
+        for a better colaboration.
       </MDBox>
       <MDBox
         component="ul"
