@@ -65,12 +65,6 @@ const routes = [
         component: <Reports />,
       },
       {
-        name: "Timeline",
-        key: "timeline",
-        route: "/dashboards/projects/timeline",
-        component: <Timeline />,
-      },
-           {
         name: "Widgets",
         key: "widgets",
         route: "/dashboards/widgets",
