@@ -15,7 +15,6 @@ import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignUpCover from "layouts/authentication/sign-up/cover";
 import ResetCover from "layouts/authentication/reset-password/cover";
 
-// Material Dashboard 3 PRO React components
 import MDAvatar from "components/MDAvatar";
 
 // @mui icons
