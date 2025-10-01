@@ -90,6 +90,12 @@ const routes = [
       },
     ],
   },
+  {
+        name: "Timeline",
+        key: "timeline",
+        route: "/dashboards/projects/timeline",
+        component: <Timeline />,
+      },
   { type: "title", title: "Applications", key: "title-Apps" },
  
   {
