@@ -96,7 +96,7 @@ const routes = [
       },
     ],
   },
-  { type: "title", title: "Apps", key: "title-Apps" },
+  { type: "title", title: "Applications", key: "title-Apps" },
  
   {
     type: "collapse",
