@@ -65,24 +65,30 @@ const routes = [
         component: <Reports />,
       },
       {
+        name: "Timeline",
+        key: "timeline",
+        route: "/dashboards/projects/timeline",
+        component: <Timeline />,
+      },
+      {
         name: "Widgets",
         key: "widgets",
         route: "/dashboards/widgets",
         component: <Widgets />,
       },
-            {
+      {
         name: "Charts",
         key: "charts",
         route: "/dashboards/charts",
         component: <Charts />,
       },
-            {
+      {
         name: "Notifications",
         key: "notifications",
         route: "/dashboards/notifications",
         component: <Notifications />,
       },
-            {
+      {
         name: "Calendar",
         key: "calendar",
         route: "/dashboards/calendar",
@@ -90,9 +96,26 @@ const routes = [
       },
     ],
   },
+  { type: "title", title: "Apps", key: "title-Apps" },
+  {
+    type: "collapse",
+    name: "Account",
+    key: "account",
+    icon: <Icon fontSize="small">person</Icon>,
+    collapse: [
+      {
+        name: "Settings",
+        key: "settings",
+        route: "/pages/account/settings",
+        component: <Settings />,
+      },
+      {
+        name: "Users",
+        key: "users",
+        route: "/pages/account/users",
         component: <Users />,
       },
-           {
+      {
         name: "Billing",
         key: "billing",
         route: "/pages/account/billing",

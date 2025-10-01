@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
 
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
