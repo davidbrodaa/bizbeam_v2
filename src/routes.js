@@ -1,5 +1,6 @@
 // Material Dashboard 3 PRO React layouts
 import Analytics from "layouts/dashboards/analytics";
+import Reports from "layouts/dashboards/reports";
 import AllProjects from "layouts/transmissions/all-projects";
 import Settings from "layouts/account/settings";
 import Billing from "layouts/account/billing";
@@ -56,6 +57,12 @@ const routes = [
         key: "analytics",
         route: "/dashboards/analytics",
         component: <Analytics />,
+      },
+      {
+        name: "Reports",
+        key: "reports",
+        route: "/dashboards/reports",
+        component: <Reports />,
       },
       {
         name: "Timeline",
