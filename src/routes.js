@@ -90,30 +90,6 @@ const routes = [
       },
     ],
   },
-  {
-        name: "Timeline",
-        key: "timeline",
-        route: "/dashboards/projects/timeline",
-        component: <Timeline />,
-      },
-  { type: "title", title: "Applications", key: "title-Apps" },
- 
-  {
-    type: "collapse",
-    name: "Account",
-    key: "account",
-    icon: <Icon fontSize="small">person</Icon>,
-    collapse: [
-      {
-        name: "Settings",
-        key: "settings",
-        route: "/pages/account/settings",
-        component: <Settings />,
-      },
-      {
-        name: "Users",
-        key: "users",
-        route: "/pages/account/users",
         component: <Users />,
       },
            {
