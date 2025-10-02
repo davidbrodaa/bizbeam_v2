@@ -67,7 +67,7 @@ const routes = [
       {
         name: "Timeline",
         key: "timeline",
-        route: "/dashboards/projects/timeline",
+        route: "/dashboards/timeline",
         component: <Timeline />,
       },
       {
