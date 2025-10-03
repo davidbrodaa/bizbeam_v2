@@ -1,9 +1,7 @@
-// Material Dashboard 3 PRO React layouts
 import AllProjects from "layouts/transmissions/all-projects";
 import Settings from "layouts/account/settings";
 import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
-
 import MDAvatar from "components/MDAvatar";
 
 // @mui icons
