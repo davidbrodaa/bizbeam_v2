@@ -88,6 +88,37 @@ const routes = [
   { type: "title", title: "Company Profile", key: "title-company" },
   {
     type: "collapse",
+    name: "Profile",
+    key: "profile",
+    icon: <Icon fontSize="small">person</Icon>,
+    collapse: [
+    ],
+  },
+  {
+    type: "collapse",
+    name: "Teams",
+    key: "teams",
+    icon: <Icon fontSize="small">group</Icon>,
+    collapse: [
+    ],
+  },
+  {
+    type: "collapse",
+    name: "Settings",
+    key: "settings",
+    icon: <Icon fontSize="small">settings</Icon>,
+    collapse: [
+      {
+        name: "Account Settings",
+        key: "account-settings",
+        route: "/pages/account/settings",
+        component: <Settings />,
+      },
+    ],
+  },
+  { type: "title", title: "Docs", key: "title-docs" },
+  {
+    type: "collapse",
     name: "How to...",
     key: "how-to",
     icon: <Icon fontSize="small">description</Icon>,
