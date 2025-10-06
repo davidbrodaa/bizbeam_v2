@@ -37,7 +37,18 @@ const routes = [
     name: "AI Agent",
     key: "ai-agent",
     icon: <Icon fontSize="small">smart_toy</Icon>,
-    collapse: [],
+    collapse: [
+      {
+        name: "Image Model",
+        key: "image-model",
+        route: "/ai-agent/image-model",
+      },
+      {
+        name: "Transmission Model",
+        key: "transmission-model",
+        route: "/ai-agent/transmission-model",
+      },
+    ],
   },
   {
     type: "collapse",
