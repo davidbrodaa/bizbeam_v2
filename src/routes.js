@@ -71,6 +71,11 @@ const routes = [
         key: "images-dashboard",
         route: "/dashboards/images-dashboard",
       },
+      {
+        name: "Admin Dashboard",
+        key: "admin-dashboard",
+        route: "/dashboards/admin-dashboard",
+      },
     ],
   },
   { type: "title", title: "Applications", key: "title-Apps" },
