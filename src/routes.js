@@ -34,6 +34,13 @@ const routes = [
   { type: "divider", key: "divider-0" },
   {
     type: "collapse",
+    name: "AI Agent",
+    key: "ai-agent",
+    icon: <Icon fontSize="small">smart_toy</Icon>,
+    collapse: [],
+  },
+  {
+    type: "collapse",
     name: "Dashboards",
     key: "dashboards",
     icon: <Icon fontSize="small">dashboard</Icon>,
