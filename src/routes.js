@@ -48,6 +48,11 @@ const routes = [
         key: "transmission-model",
         route: "/ai-agent/transmission-model",
       },
+       {
+        name: "Admin Model",
+        key: "admin-model",
+        route: "/ai-agent/admin-model",
+      },
     ],
   },
   {
