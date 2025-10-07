@@ -109,12 +109,7 @@ function ImageModel() {
                       border: 'none'
                     }
                   }}
-                >
-                  <MenuItem value="festival-ops">Festival Ops Agent</MenuItem>
-                  <MenuItem value="marketing">Marketing Agent</MenuItem>
-                  <MenuItem value="supply-chain">Supply Chain Agent</MenuItem>
-                  <MenuItem value="analytics">Analytics Agent</MenuItem>
-                </Select>
+               
               </FormControl>
 
               <FormControl sx={{ minWidth: 150 }}>
