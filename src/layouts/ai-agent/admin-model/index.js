@@ -62,7 +62,7 @@ function AdminModel() {
           >
             <div style={{ position: 'relative' }}>
               <Input
-                placeholder="Ask Bizbeam Assistant about your admin related tasks..."
+                placeholder="Feel free to ask the Bizbeam Assistant about any tasks related to administration..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
