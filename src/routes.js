@@ -52,12 +52,6 @@ const routes = [
         route: "/ai-agent/transmission-model",
         component: <TransmissionModel />,
       },
-      {
-        name: "Admin Model",
-        key: "admin-model",
-        route: "/ai-agent/admin-model",
-        component: <AdminModel />,
-      },
     ],
   },
   {
@@ -71,12 +65,6 @@ const routes = [
         key: "timeline",
         route: "/dashboards/timeline",
         component: <Timeline />,
-      },
-      {
-        name: "ImagesDashboard",
-        key: "Images Dashboard",
-        route: "/dashboards/images-dashboard",
-        component: <ImagesDashboard />,
       },
     ],
   },
