@@ -2,6 +2,7 @@ import AllProjects from "layouts/transmissions/all-projects";
 import Settings from "layouts/account/settings";
 import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
+import ImageModel from "layouts/ai-agent/image-model";
 import MDAvatar from "components/MDAvatar";
 
 // @mui icons
@@ -42,16 +43,12 @@ const routes = [
         name: "Image Model",
         key: "image-model",
         route: "/ai-agent/image-model",
+        component: <ImageModel />,
       },
       {
         name: "Transmission Model",
         key: "transmission-model",
         route: "/ai-agent/transmission-model",
-      },
-       {
-        name: "Admin Model",
-        key: "admin-model",
-        route: "/ai-agent/admin-model",
       },
     ],
   },
@@ -65,16 +62,7 @@ const routes = [
         name: "Timeline",
         key: "timeline",
         route: "/dashboards/timeline",
-      },
-      {
-        name: "Images Dashboard",
-        key: "images-dashboard",
-        route: "/dashboards/images-dashboard",
-      },
-      {
-        name: "Admin Dashboard",
-        key: "admin-dashboard",
-        route: "/dashboards/admin-dashboard",
+        component: <Timeline />,
       },
     ],
   },
