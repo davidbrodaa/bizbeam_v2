@@ -9,9 +9,9 @@ import { Input } from 'components/ui/input';
 import { Button } from 'components/ui/button';
 
 const suggestedPrompts = [
-  "Find Chase transmissions.",
-  "Show me the activity for the last 30 days for the file name AMBYYYYMMDD.",
-  "Show me a summary of AU192 job"
+  "Show me John Smith last activity.",
+  "Create an access report.",
+  "Who has access to Images module"
 ];
 
 function AdminModel() {
