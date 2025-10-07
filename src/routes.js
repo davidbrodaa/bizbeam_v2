@@ -4,6 +4,7 @@ import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import ImageModel from "layouts/ai-agent/image-model";
 import TransmissionModel from "layouts/ai-agent/transmission-model";
+import AdminModel from "layouts/ai-agent/admin-model";
 import MDAvatar from "components/MDAvatar";
 
 // @mui icons
@@ -51,6 +52,12 @@ const routes = [
         key: "transmission-model",
         route: "/ai-agent/transmission-model",
         component: <TransmissionModel />,
+      },
+      {
+        name: "Admin Model",
+        key: "admin-model",
+        route: "/ai-agent/admin-model",
+        component: <AdminModel />,
       },
     ],
   },
