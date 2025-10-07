@@ -52,6 +52,12 @@ const routes = [
         route: "/ai-agent/transmission-model",
         component: <TransmissionModel />,
       },
+       {
+        name: "Admin Model",
+        key: "admin-model",
+        route: "/ai-agent/admin-model",
+        component: <AdminModel />,
+      },
     ],
   },
   {
