@@ -11,7 +11,7 @@ import { Button } from 'components/ui/button';
 const suggestedPrompts = [
   "Find Chase transmissions.",
   "Show me the activity for the last 30 days for the file name AMBYYYYMMDD.",
-  "Show me a summary of Jeff Murray's latest transmission"
+  "Show me a summary of AU192 job"
 ];
 
 function TransmissionModel() {
