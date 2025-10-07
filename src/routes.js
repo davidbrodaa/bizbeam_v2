@@ -3,6 +3,7 @@ import Settings from "layouts/account/settings";
 import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import ImageModel from "layouts/ai-agent/image-model";
+import TransmissionModel from "layouts/ai-agent/transmission-model";
 import MDAvatar from "components/MDAvatar";
 
 // @mui icons
@@ -49,6 +50,7 @@ const routes = [
         name: "Transmission Model",
         key: "transmission-model",
         route: "/ai-agent/transmission-model",
+        component: <TransmissionModel />,
       },
     ],
   },
