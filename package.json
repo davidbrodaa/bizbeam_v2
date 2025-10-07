@@ -49,8 +49,7 @@
     "stylis": "4.3.4",
     "stylis-plugin-rtl": "2.1.1",
     "uuid": "11.0.2",
-    "yup": "1.4.0",
-    "lucide-react": "0.263.1"
+    "yup": "1.4.0"
   },
   "scripts": {
     "start": "DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-scripts start",

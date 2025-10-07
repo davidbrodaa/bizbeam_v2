@@ -3,7 +3,8 @@ import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
 import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
 import MDBox from 'components/MDBox';
 import Card from '@mui/material/Card';
-import { Settings, ArrowUp } from 'lucide-react';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Input } from 'components/ui/input';
 import { Button } from 'components/ui/button';
 
@@ -96,7 +97,7 @@ function ImageModel() {
                     borderRadius: '8px'
                   }}
                 >
-                  <Settings size={18} style={{ color: '#6c757d' }} />
+                  <SettingsIcon style={{ fontSize: 18, color: '#6c757d' }} />
                 </Button>
                 <Button
                   size="sm"
@@ -109,7 +110,7 @@ function ImageModel() {
                     borderRadius: '8px'
                   }}
                 >
-                  <ArrowUp size={18} style={{ color: '#495057' }} />
+                  <ArrowUpwardIcon style={{ fontSize: 18, color: '#495057' }} />
                 </Button>
               </div>
             </div>
