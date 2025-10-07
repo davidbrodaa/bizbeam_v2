@@ -9,8 +9,8 @@ import { Input } from 'components/ui/input';
 import { Button } from 'components/ui/button';
 
 const suggestedPrompts = [
-  "Find transmissions that belong to Jeff Murray?",
-  "Show me transmission AB1281861",
+  "Find Chase transmissions.",
+  "Show me the activity for the last 30 days for the file name AMBYYYYMMDD.",
   "Show me a summary of Jeff Murray's latest transmission"
 ];
 
