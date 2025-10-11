@@ -65,7 +65,7 @@ function AllProjects() {
     >
       <MenuItem onClick={close}>Monitor</MenuItem>
       <MenuItem onClick={close}>Edit</MenuItem>
-//      <MenuItem onClick={close}>Request Permision</MenuItem>
+     // <MenuItem onClick={close}>Request Permision</MenuItem>
     </Menu>
   );
 
