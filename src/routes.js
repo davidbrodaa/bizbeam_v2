@@ -67,12 +67,7 @@ const routes = [
     key: "dashboards",
     icon: <Icon fontSize="small">dashboard</Icon>,
     collapse: [
-      {
-        name: "Timeline",
-        key: "timeline",
-        route: "/dashboards/timeline",
-        component: <Timeline />,
-      },
+      
     ],
   },
   { type: "title", title: "Applications", key: "title-Apps" },
@@ -112,6 +107,12 @@ const routes = [
     key: "monitoring",
     icon: <Icon fontSize="small">monitor</Icon>,
     collapse: [
+     {
+        name: "Timeline",
+        key: "timeline",
+        route: "/dashboards/timeline",
+        component: <Timeline />,
+      },
     ],
   },
   { type: "title", title: "Company Profile", key: "title-company" },
