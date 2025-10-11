@@ -64,6 +64,7 @@ function AllProjects() {
       keepMounted
     >
       <MenuItem onClick={close}>Monitor</MenuItem>
+      <MenuItem onClick={close}>View</MenuItem>
       <MenuItem onClick={close}>Edit</MenuItem>
     </Menu>
   );
