@@ -87,8 +87,8 @@ const routes = [
     collapse: [
       {
         name: "Projects",
-        key: "all-projects",
-        route: "/transmissions/all-projects",
+        key: "projects",
+        route: "/transmissions/projects",
         component: <AllProjects />,
       },
     ],
