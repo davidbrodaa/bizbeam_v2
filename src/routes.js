@@ -1,4 +1,4 @@
-import AllProjects from "layouts/transmissions/all-projects";
+import AllProjects from "layouts/transmissions/projects";
 import Settings from "layouts/account/settings";
 import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
