@@ -63,9 +63,9 @@ function AllProjects() {
       onClose={close}
       keepMounted
     >
-      <MenuItem onClick={close}>Action</MenuItem>
-      <MenuItem onClick={close}>Another action</MenuItem>
-      <MenuItem onClick={close}>Something else here</MenuItem>
+      <MenuItem onClick={close}>Monitor</MenuItem>
+      <MenuItem onClick={close}>Edit</MenuItem>
+//      <MenuItem onClick={close}>Request Permision</MenuItem>
     </Menu>
   );
 
