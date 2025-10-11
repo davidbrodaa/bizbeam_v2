@@ -79,11 +79,11 @@ function AllProjects() {
         <Grid container alignItems="center">
           <Grid item xs={12} md={7}>
             <MDBox mb={1}>
-              <MDTypography variant="h5">All Projects</MDTypography>
+              <MDTypography variant="h5">Projects</MDTypography>
             </MDBox>
             <MDBox mb={2}>
               <MDTypography variant="body2" color="text">
-                All Projects are listed here. You can add, edit, or delete projects as needed.
+                Projects are listed here. You can add, edit, or delete projects as needed.
               </MDTypography>
             </MDBox>
           </Grid>
