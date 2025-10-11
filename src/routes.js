@@ -86,7 +86,7 @@ const routes = [
     icon: <Icon fontSize="small">apps</Icon>,
     collapse: [
       {
-        name: "All Projects",
+        name: "Projects",
         key: "all-projects",
         route: "/transmissions/all-projects",
         component: <AllProjects />,
@@ -107,7 +107,7 @@ const routes = [
     key: "monitoring",
     icon: <Icon fontSize="small">monitor</Icon>,
     collapse: [
-     {
+      {
         name: "Timeline",
         key: "timeline",
         route: "/dashboards/timeline",
