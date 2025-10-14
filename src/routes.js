@@ -5,7 +5,14 @@ import SignInBasic from "layouts/authentication/sign-in/basic";
 import ImageModel from "layouts/ai-agent/image-model";
 import TransmissionModel from "layouts/ai-agent/transmission-model";
 import AdminModel from "layouts/ai-agent/admin-model";
+import Calendar from "layouts/dashboards/calendar";
 import MDAvatar from "components/MDAvatar";
+import Documentation from "layouts/transmissions/documentation";
+import TransmissionsDoc from "layouts/transmissions/documentation/TransmissionsDoc";
+import ImagesDoc from "layouts/transmissions/documentation/ImagesDoc";
+import Vault from "layouts/transmissions/documentation/Vault";
+import Usage from "layouts/monitoring/Usage";
+import Partners from "layouts/transmissions/Partners";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -91,14 +98,46 @@ const routes = [
         route: "/transmissions/projects",
         component: <AllProjects />,
       },
+      {
+        name: "BizLink",
+        key: "bizlink",
+        route: "/transmissions/partners",
+        component: <Partners />,
+      },
+      {
+        name: "Schedule",
+        key: "schedule",
+        route: "/transmissions/schedule",
+        icon: <Icon fontSize="small">calendar_today</Icon>,
+        component: <Calendar />,
+      },
     ],
   },
   {
     type: "collapse",
-    name: "Schedule",
-    key: "schedule",
-    icon: <Icon fontSize="small">calendar_today</Icon>,
+    name: "Documentation",
+    key: "documentation",
+    icon: <Icon fontSize="small">description</Icon>,
     collapse: [
+      {
+        name: "Transmissions Doc",
+        key: "transmissions-doc",
+        route: "/applications/documentation/transmissions",
+        component: <TransmissionsDoc />,
+      },
+      {
+        name: "Images Docs",
+        key: "images-docs",
+        route: "/applications/documentation/images",
+        component: <ImagesDoc />,
+      },
+      {
+        name: "Vault",
+        key: "vault",
+        route: "/applications/documentation/vault",
+        icon: <Icon fontSize="small">lock</Icon>,
+        component: <Vault />,
+      },
     ],
   },
   {
@@ -112,6 +151,12 @@ const routes = [
         key: "timeline",
         route: "/dashboards/timeline",
         component: <Timeline />,
+      },
+      {
+        name: "Usage",
+        key: "usage",
+        route: "/monitoring/usage",
+        component: <Usage />,
       },
     ],
   },
