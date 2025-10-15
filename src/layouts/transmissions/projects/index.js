@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -35,8 +34,6 @@ import logoInvision from "assets/images/small-logos/logo-invision.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 
 function AllProjects() {
-  const navigate = useNavigate();
-
   // ComplexProjectCard dropdown menu state
   const [slackBotMenu, setSlackBotMenu] = useState(null);
   const [premiumSupportMenu, setPremiumSupportMenu] = useState(null);
@@ -69,25 +66,6 @@ function AllProjects() {
       <MenuItem onClick={close}>Monitor</MenuItem>
       <MenuItem onClick={close}>View</MenuItem>
       <MenuItem onClick={close}>Edit</MenuItem>
-    </Menu>
-  );
-
-  // Slack Bot specific menu with Modify option
-  const renderSlackBotMenu = (state, close) => (
-    <Menu
-      anchorEl={state}
-      anchorOrigin={{ vertical: "top", horizontal: "left" }}
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={Boolean(state)}
-      onClose={close}
-      keepMounted
-    >
-      <MenuItem onClick={close}>Monitor</MenuItem>
-      <MenuItem onClick={close}>View</MenuItem>
-      <MenuItem onClick={() => {
-        close();
-        navigate("/transmissions/projects/slack-bot");
-      }}>Edit</MenuItem>
     </Menu>
   );
 
@@ -127,7 +105,7 @@ function AllProjects() {
                   members={[team1, team2, team3, team4, team5]}
                   dropdown={{
                     action: openSlackBotMenu,
-                    menu: renderSlackBotMenu(slackBotMenu, closeSlackBotMenu),
+                    menu: renderMenu(slackBotMenu, closeSlackBotMenu),
                   }}
                 />
               </MDBox>
