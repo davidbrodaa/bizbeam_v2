@@ -52,6 +52,33 @@ function SlackBotProject() {
               }}
             >
               <MDBox p={2}>
+                <MDBox display="flex" flexDirection="column" alignItems="center" mb={3} pb={3} sx={{ borderBottom: "1px solid #e9ecef" }}>
+                  <MDBox
+                    component="img"
+                    src={projectDiImg}
+                    alt="Slack Bot"
+                    sx={{
+                      width: 64,
+                      height: 64,
+                      borderRadius: "50%",
+                      objectFit: "cover",
+                      mb: 1.5,
+                    }}
+                  />
+                  <MDTypography
+                    variant="h6"
+                    fontWeight="medium"
+                    sx={{ color: "#344767", mb: 0.5 }}
+                  >
+                    Slack Bot
+                  </MDTypography>
+                  <MDTypography
+                    variant="caption"
+                    sx={{ color: "#6c757d", cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Upload Logo
+                  </MDTypography>
+                </MDBox>
                 {menuItems.map((item) => (
                   <MDBox
                     key={item.key}
@@ -110,32 +137,13 @@ function SlackBotProject() {
                     mb={3}
                   >
                     <MDBox display="flex" alignItems="center" gap={2}>
-                      <MDBox
-                        component="img"
-                        src={projectDiImg}
-                        alt="Slack Bot"
-                        sx={{
-                          width: 64,
-                          height: 64,
-                          borderRadius: "50%",
-                          objectFit: "cover",
-                        }}
-                      />
-                      <MDBox>
-                        <MDTypography
-                          variant="h6"
-                          fontWeight="medium"
-                          sx={{ color: "#344767" }}
-                        >
-                          Slack Bot
-                        </MDTypography>
-                        <MDTypography
-                          variant="caption"
-                          sx={{ color: "#6c757d", cursor: "pointer", textDecoration: "underline" }}
-                        >
-                          Upload Logo
-                        </MDTypography>
-                      </MDBox>
+                      <MDTypography
+                        variant="button"
+                        fontWeight="medium"
+                        sx={{ color: "#6c757d", fontSize: "0.875rem" }}
+                      >
+                        State:
+                      </MDTypography>
                     </MDBox>
                     <MDBox display="flex" gap={1}>
                       <Chip
