@@ -100,12 +100,6 @@ const routes = [
         component: <AllProjects />,
       },
       {
-        name: "Slack Bot",
-        key: "slack-bot",
-        route: "/transmissions/projects/slack-bot",
-        component: <SlackBotProject />,
-      },
-      {
         name: "BizLink",
         key: "bizlink",
         route: "/transmissions/partners",
