@@ -1,4 +1,5 @@
 import AllProjects from "layouts/transmissions/projects";
+import SlackBotProject from "layouts/transmissions/projects/slack-bot";
 import Settings from "layouts/account/settings";
 import Timeline from "layouts/dashboards/projects/timeline";
 import SignInBasic from "layouts/authentication/sign-in/basic";
@@ -97,6 +98,12 @@ const routes = [
         key: "projects",
         route: "/transmissions/projects",
         component: <AllProjects />,
+      },
+      {
+        name: "Slack Bot",
+        key: "slack-bot",
+        route: "/transmissions/projects/slack-bot",
+        component: <SlackBotProject />,
       },
       {
         name: "BizLink",
