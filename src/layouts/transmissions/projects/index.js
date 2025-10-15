@@ -84,7 +84,6 @@ function AllProjects() {
     >
       <MenuItem onClick={close}>Monitor</MenuItem>
       <MenuItem onClick={close}>View</MenuItem>
-      <MenuItem onClick={close}>Edit</MenuItem>
       <MenuItem onClick={() => {
         close();
         navigate("/transmissions/projects/slack-bot");
