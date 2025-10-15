@@ -103,7 +103,7 @@ function ComplexProjectCard({ color = "dark", image, title, dateTime = "", descr
                 {members.length}
               </MDTypography>
               <MDTypography variant="button" fontWeight="regular" color="secondary">
-                Participants
+                Contributors
               </MDTypography>
             </MDBox>
           ) : null}
