@@ -88,10 +88,6 @@ function AllProjects() {
         close();
         navigate("/transmissions/projects/slack-bot");
       }}>Edit</MenuItem>
-      <MenuItem onClick={() => {
-        close();
-        navigate("/transmissions/projects/slack-bot");
-      }}>Modify</MenuItem>
     </Menu>
   );
 
