@@ -113,7 +113,7 @@ function ComplexProjectCard({ color = "dark", image, title, dateTime = "", descr
                 {dateTime}
               </MDTypography>
               <MDTypography variant="button" fontWeight="regular" color="secondary">
-                Due date
+                Start Date
               </MDTypography>
             </MDBox>
           ) : null}
