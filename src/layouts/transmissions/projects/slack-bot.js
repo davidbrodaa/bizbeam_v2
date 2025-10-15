@@ -12,6 +12,7 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
 import MDButton from "components/MDButton";
+import projectDiImg from "assets/images/project_di.png";
 
 function SlackBotProject() {
   const [activeSection, setActiveSection] = useState("profile");
@@ -110,21 +111,16 @@ function SlackBotProject() {
                   >
                     <MDBox display="flex" alignItems="center" gap={2}>
                       <MDBox
+                        component="img"
+                        src={projectDiImg}
+                        alt="Slack Bot"
                         sx={{
                           width: 64,
                           height: 64,
                           borderRadius: "50%",
-                          backgroundColor: "#344767",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: "white",
-                          fontSize: "24px",
-                          fontWeight: "600",
+                          objectFit: "cover",
                         }}
-                      >
-                        S
-                      </MDBox>
+                      />
                       <MDBox>
                         <MDTypography
                           variant="h6"
